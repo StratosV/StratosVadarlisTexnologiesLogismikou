@@ -1,0 +1,34 @@
+@Test
+    public void testDocDatatypeFromName()
+    {
+        DocDatatype d= DocDatatype.fromString("Profile");
+
+        assertTrue((d.toString().compareToIgnoreCase("PROFILE") == 0));
+
+    }
+
+    @Test
+    public void testDocDatatypeFromName1()
+    {
+        DocDatatype d = DocDatatype.fromString("SupportDetail");
+        assertTrue((d.toString().compareToIgnoreCase("SUPPORT_DETAIL") == 0 ));
+    }
+
+    }
+    @Test
+    public void testRestAreLowerCase()
+    {
+           DocDatatype n = DocDatatype.fromString("%something");
+           assertTrue((n.toString().compareToIgnoreCase("SOMETHING")== 0 ));
+    }
+    @Test
+    public void testEmptyString()
+    {
+            assertTrue(!string.isEmpty());
+    }
+           
+    @Test void testNotEmptyString()
+    {      
+            assertFalse(string.isEmpty());  
+    }      
+}
